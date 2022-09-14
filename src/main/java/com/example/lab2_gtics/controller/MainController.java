@@ -12,8 +12,16 @@ public class MainController {
 
     @GetMapping("/inicio")
     public String listaTipos (){
-        return "incio2";
+        return "inicio2";
     }
 
+    @GetMapping(value = {"/list", ""})
+    public String listarTransportistas(Model model) {
+
+        List<Shipper> lista = shipperRepository.findAll();
+        model.addAttribute("shipperList", lista);
+
+        return "shipper/list";
+    }
 
 }
