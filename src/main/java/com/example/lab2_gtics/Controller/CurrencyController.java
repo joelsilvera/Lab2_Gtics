@@ -1,7 +1,7 @@
-package com.example.lab2_gtics.controller;
+package com.example.lab2_gtics.Controller;
 
 import com.example.lab2_gtics.repository.CurrencyRepository;
-import com.example.lab2_gtics.entity.Currency;
+import com.example.lab2_gtics.Entity.Currency;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

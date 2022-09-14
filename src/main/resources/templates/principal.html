@@ -61,20 +61,22 @@
         </div>
 
         <div class="row" th:class="row">
+            <tr th:each="currency,i : ${currencyList}" >
                 <div class="col-sm-6 mt-4 ml-2 mb-4" >
                     <div class="card text-center border-white bg-transparent">
                         <div class="card-body">
-                            <tr th:each="currency,i : ${currencyList}" >
-                                <h5 class="card-title" th:text="${currency.name}"></h5>
-                                 <h5 class="card-title"  th:text="${currency.abreviation}"></h5>
-                                <p class="card-text"  th:text="${currency.network}"  ></p>
+
+                                <h5 class="card-title" th:text="|${currency.name}  ( ${currency.abreviation} )|"></h5>
+                                <p class="card-text"  th:text="|Red: ${currency.network}|"  ></p>
                                 <p class="card-text"  th:text="${currency.description}"  ></p>
-                                <p class="text-success h3" th:text="${currency.price}"></p>
-                                <p class="text-success h3" th:text="${currency.abreviation}"></p>
-                            </tr>
+                                <p class="text-success h3" th:text="| ${currency.price} (BUSD)|"></p>
+
+
                         </div>
                     </div>
+
                 </div>
+            </tr>
           </div>
     </div>
 </body>
