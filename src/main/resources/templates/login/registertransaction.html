@@ -19,7 +19,45 @@
         <h2 class="text-center mb-4">Registro de Transacciones</h2>
 
         <form method="post" th:action="@{/transaction/RegistrarTransaction}">
-            <input name="searchField" class="form-control mb-3" type="text" placeholder="Search"/>
+            <h3 class="pb-2 border-bottom">Ingrese los datos donde corresponde</h3>
+            <form th:object="${transaction}">
+                <div class="mb-3">
+                    <label class="form-label">Descripción de la Tx</label>
+                    <input class="form-control" th:field="*{transaction.description}">
+                </div>
+                <div class="mb-3">
+                    <div class="form-floating">
+                        <select class="form-select">
+                            <option th:each="currency : ${listaCarros}" th:value="${carro.marca}" th:text="${carro.marca}">Nissan</option>
+                        </select>
+                        <label>Lista de carros</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Número de Tx</label>
+                    <input class="form-control" th:value="${transaction.tx_id}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Cantidad de Monedas</label>
+                    <input class="form-control" th:value="${transaction.amount}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Comision de la Red</label>
+                    <input class="form-control" th:value="${transaction.network_fee}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Número de Bloque</label>
+                    <input class="form-control" th:value="${transaction.block}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Estado</label>
+                    <input class="form-control" th:value="${transaction.status}">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Billetera</label>
+                    <input class="form-control" th:value="${transaction.wallet_idwallet}">
+                </div>
+            </form>
         </form>
 
     </body>
