@@ -1,4 +1,4 @@
-package com.example.lab2_gtics.entity;
+package com.example.lab2_gtics.Entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

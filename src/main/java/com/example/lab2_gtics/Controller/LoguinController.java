@@ -1,4 +1,4 @@
-package com.example.lab2_gtics.controller;
+package com.example.lab2_gtics.Controller;
 
 import com.example.lab2_gtics.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
