@@ -21,7 +21,7 @@ public class LoguinController {
 
     @GetMapping("/loguear")
     public String envioHaciaElForm() {
-        return "login/inicio2";
+        return "inicio2";
     }
 
     @PostMapping("/comprobarCredenciales")
