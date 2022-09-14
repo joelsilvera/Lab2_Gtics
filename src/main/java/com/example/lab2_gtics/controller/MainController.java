@@ -1,27 +1,17 @@
 package com.example.lab2_gtics.controller;
 
 
+import com.example.lab2_gtics.repository.TransactionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MainController {
-
     @GetMapping("/inicio")
-    public String listaTipos (){
+    public String autentificacion(){
         return "inicio2";
     }
-
-    @GetMapping(value = {"/list", ""})
-    public String listarTransportistas(Model model) {
-
-        List<Shipper> lista = shipperRepository.findAll();
-        model.addAttribute("shipperList", lista);
-
-        return "shipper/list";
-    }
-
 }
