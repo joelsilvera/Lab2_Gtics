@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Compra/Venta Telecripto</title>
+</head>
+<body >
+    <div class="container">
+        <form action="/buscarCripto" method="post">
+        <div class="row mt-4">
+            <div class="col-2">
+                <img th:src="@{/logo.png}" alt="Logo" height="150"/>
+            </div>
+            <div class="col-1 mt-5">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" >Mi billetera</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2 mt-5">
+
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link ">Transacciones</a>
+                    </li>
+                </ul>
+            </div>
+
+                    <div class="col-5 mt-5">
+                        <input name="numeroTxID" class="form-control me-2 " type="search" placeholder="Buscar transacciones por TxID" aria-label="Search">
+                    </div>
+                    <div class="col-2 mt-5">
+                        <button type="submit" class="btn btn-success">Buscar</button>
+                    </div>
+            <!--
+            <div class=" col-4 mt-5">
+                <button type="button ml-3" class="btn btn-success">Inicio sesión</button>
+                <button type="button mr-3" class="btn btn-dark">Cerrar Sesión</button>
+            </div>
+            -->
+        </div>
+        </form>
+        <div class="card text-center mt-5 border-white">            
+            <div class="card-body">
+              <h5 class="card-title">La forma más popular del mundo para comprar, vender e intercambiar criptomonedas </h5>
+              <img th:src="@{/monedas.png}" height="150" alt="Monedas"/>
+            </div>
+        </div>
+
+        <div class="row" th:class="row">
+                <div class="col-sm-6 mt-4 ml-2 mb-4" >
+                    <div class="card text-center border-white bg-transparent">
+                        <div class="card-body">
+                            <h5 class="card-title" ></h5>
+                            <p class="card-text" ></p>
+                            <p class="card-text" ></p>
+                            <p class="text-success h3"></p>
+                        </div>
+                    </div>
+                </div>
+          </div>
+    </div>
+</body>
+
+</html>
