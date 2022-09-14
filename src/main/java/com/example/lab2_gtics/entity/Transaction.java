@@ -1,4 +1,4 @@
-package com.example.lab2_gtics.Entity;
+package com.example.lab2_gtics.entity;
 
 import javax.persistence.*;
 

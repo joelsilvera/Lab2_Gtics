@@ -1,8 +1,8 @@
 package com.example.lab2_gtics.Controller;
 
-import com.example.lab2_gtics.Entity.Transaction;
-import com.example.lab2_gtics.Repository.TransactionRepository;
-import com.example.lab2_gtics.Repository.WalletRepository;
+import com.example.lab2_gtics.entity.Transaction;
+import com.example.lab2_gtics.repository.TransactionRepository;
+import com.example.lab2_gtics.repository.WalletRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

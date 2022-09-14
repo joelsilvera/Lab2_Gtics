@@ -1,6 +1,6 @@
-package com.example.lab2_gtics.Repository;
+package com.example.lab2_gtics.repository;
 
-import com.example.lab2_gtics.Entity.Wallet;
+import com.example.lab2_gtics.entity.Wallet;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
