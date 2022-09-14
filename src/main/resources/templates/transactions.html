@@ -16,6 +16,10 @@
 </head>
 <body class="container-fluid mt-4">
 <h2 class="text-center mb-4">Mis Transacciones</h2>
+
+<form method="post" th:action="@{/transaction/BuscarTransaction}">
+  <input name="searchField" class="form-control mb-3" type="text" placeholder="Search"/>
+</form>
 <table class="table table-dark table-striped">
   <tr>
     <th class="text-center">#</th>
@@ -27,8 +31,8 @@
     <th class="text-center">Status</th>
     <th class="text-center">Wallet</th>
   </tr>
-  <tr th:each="transaction, info : ${listaTransaccion}" >
-    <td class="text-center" th:text="${info.index + 1}" ></td>
+  <tr th:each="transaction: ${listaTransaccion}" >
+    <td class="text-center" th:text="${transaction.id}" ></td>
     <td class="text-center" th:text="${transaction.txId}"></td>
     <td class="text-center" th:text="${transaction.amount}"></td>
     <td class="text-center" th:text="${transaction.networkFee}"></td>
