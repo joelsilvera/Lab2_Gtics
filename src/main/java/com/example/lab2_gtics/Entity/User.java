@@ -1,4 +1,4 @@
-package com.example.lab2_gtics.entity;
+package com.example.lab2_gtics.Entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class User {
     @Id
     @Column(name = "iduser", nullable = false)
-    private Integer id;
+    private Integer iduser;
 
     @Column(name = "username", nullable = false, length = 45)
     private String username;
@@ -22,11 +22,11 @@ public class User {
     private String password;
 
     public Integer getId() {
-        return id;
+        return iduser;
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        this.iduser = id;
     }
 
     public String getUsername() {
