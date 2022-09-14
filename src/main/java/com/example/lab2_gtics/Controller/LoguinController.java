@@ -1,12 +1,12 @@
 package com.example.lab2_gtics.Controller;
 
-import com.example.lab2_gtics.Repository.UserRepository;
+import com.example.lab2_gtics.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.example.lab2_gtics.Entity.User;
+import com.example.lab2_gtics.entity.User;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -31,18 +31,12 @@ public class LoguinController {
         List<User> userList = userRepository.findAll();
         for(User usuario : userList){
             if(usuario.getEmail().equals(email) && usuario.getPassword().equals(password)){
-                System.out.println("Logueo Exitoso");
-                return "redirect:/login/accedido";
+                return "redirect:/currency/listar";
             }else{
                 return "redirect:/login/loguear";
             }
         }
         return "redirect:/";
-    }
-
-    @GetMapping("/accedido")
-    public String accedido() {
-        return "principal";
     }
 
 }

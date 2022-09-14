@@ -1,4 +1,4 @@
-package com.example.lab2_gtics.Repository;
+package com.example.lab2_gtics.repository;
 
 public interface WalletXCurrencyRepository {
 }
