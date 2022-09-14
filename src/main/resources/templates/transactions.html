@@ -18,6 +18,7 @@
 <h2 class="text-center mb-4">Mis Transacciones</h2>
 <table class="table table-dark table-striped">
   <tr>
+    <th class="text-center">#</th>
     <th class="text-center">TxID</th>
     <th class="text-center">Cantidad Comprada</th>
     <th class="text-center">Tarifa de Red</th>
@@ -26,14 +27,15 @@
     <th class="text-center">Status</th>
     <th class="text-center">Wallet</th>
   </tr>
-  <tr th:each="" >
-    <td class="text-center" ></td>
-    <td class="text-center" ></td>
-    <td class="text-center" ></td>
-    <td class="text-center" ></td>
-    <td class="text-center" ></td>
-    <td class="text-center" ></td>
-    <td class="text-center" ></td>
+  <tr th:each="transaction, info : ${listaTransaccion}" >
+    <td class="text-center" th:text="${info.index + 1}" ></td>
+    <td class="text-center" th:text="${transaction.txId}"></td>
+    <td class="text-center" th:text="${transaction.amount}"></td>
+    <td class="text-center" th:text="${transaction.networkFee}"></td>
+    <td class="text-center" th:text="${transaction.block}" ></td>
+    <td class="text-center" th:text="${transaction.currency}"></td>
+    <td class="text-center" th:text="${transaction.status}" ></td>
+    <td class="text-center" th:text="${transaction.walletIdwallet.getAddress()}" ></td>
   </tr>
 </table>
 
